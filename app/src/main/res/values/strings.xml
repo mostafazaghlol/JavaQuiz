@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Java Quiz</string>
+    <string name="Q1">Q 1 - What is a class in java?</string>
+    <string name="notify_me">A</string>
+    <string name="notify_A">A</string>
+    <string name="notify_B">B</string>
+    <string name="notify_C">C</string>
+    <string name="notify_D">D</string>
+</resources>
