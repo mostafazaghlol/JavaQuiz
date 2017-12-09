@@ -7,9 +7,9 @@
          android:angle="270"/> 
 
     <corners 
-         android:bottomRightRadius="7dp"
-         android:bottomLeftRadius="7dp"
-         android:topLeftRadius="54dp"
+         android:bottomRightRadius="8dp"
+         android:bottomLeftRadius="8dp"
+         android:topLeftRadius="40dp"
          android:topRightRadius="7dp"/>
     <solid
         android:color="@color/primary_light"/>

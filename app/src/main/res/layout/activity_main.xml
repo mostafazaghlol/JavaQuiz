@@ -8,12 +8,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:layout_margin="10dp"
         android:background="@drawable/customshape"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/QuestionTX"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -28,10 +30,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="2dp"
-            android:gravity="left"
+            android:gravity="start"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/primary_text"
-            android:text="A - class is a blue print from which individual objects are created. A class can contain fields and methods to describe the behavior of an object." />
+            android:id="@+id/Answer1"
+            android:text="A - A class is a blue print from which individual objects are created. A class can contain fields and methods to describe the behavior of an object." />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +43,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="2dp"
-            android:gravity="left"
+            android:gravity="start"
+            android:id="@+id/Answer2"
             android:text="B - class is a special data type."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/primary_text" />
@@ -52,7 +56,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="2dp"
-            android:gravity="left"
+            android:gravity="start"
+            android:id="@+id/Answer3"
             android:text="C - class is used to allocate memory to a data type."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/primary_text" />
@@ -66,6 +71,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginTop="2dp"
             android:gravity="left"
+            android:id="@+id/Answer4"
             android:text="D - none of the above."
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/primary_text" />
@@ -79,31 +85,36 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/Radio">
                 <RadioButton
                     android:id="@+id/A_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/notify_A"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:onClick="onRadioButtonClicked"/>
                 <RadioButton
                     android:id="@+id/B_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/notify_B"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:onClick="onRadioButtonClicked"/>
                 <RadioButton
                     android:id="@+id/C_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/notify_C"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:onClick="onRadioButtonClicked"/>
                 <RadioButton
                     android:id="@+id/D_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/notify_D"
-                    android:textAppearance="?android:textAppearanceMedium" />
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:onClick="onRadioButtonClicked"/>
             </RadioGroup>
 
         </LinearLayout>
@@ -112,10 +123,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Next"
+            android:text="start"
+            android:id="@+id/BuNext"
             android:background="@color/primary_light"/>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/customshapeforresult">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Result is: "
+                android:textColor="@color/primary_text"
+                android:textAppearance="?android:textAppearanceMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/result_is"
+                android:textColor="@color/primary_text"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="0"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
